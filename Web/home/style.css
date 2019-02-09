@@ -1,0 +1,34 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    align-content: center;
+}
+
+#init {
+    height: 50%;
+    align-content: center;
+    text-align: center;
+    background-color: rgb(245, 245, 245);
+}
+
+#user_actions {
+    width: 50%;
+}
+
+#image {
+    height: 75%;
+    align-content: center;
+    vertical-align: middle;
+}
+
+#title {
+    height: 25%;
+}
+
+.image {
+    margin: auto;
+    display: block;
+    align-self: flex-end;
+}
