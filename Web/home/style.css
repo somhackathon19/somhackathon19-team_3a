@@ -57,7 +57,7 @@ html, body {
 }
 
 #x {
-    background-color: red;
+    font-size: 20pt;
     float: right;
     cursor: pointer;
 }
