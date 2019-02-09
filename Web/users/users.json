@@ -14,25 +14,31 @@
         "rating": 012345,
         "historial": {
             "xerrades": {
-                {
+                "primera":{
                     "data": "dd/mm/yyyy",
                     "descripció": "Una xerrada molt bonica",
-                    assistències.xerrada1,
-                    rating.xerrada1,
-                }
-            }
-            activitats: {
-                {
-                    data.xerrada1
+                    "assistència": 34,
+                    "rating": 4.3,
+                },
+                "segona": {
+                    "data": "dd/mm/yyyy",
+                    "descripció": "Una xerrada molt merda",
+                    "assistència": 34,
+                    "rating": 2.1,
+                },
+            },
+            "activitats": {
+                "primera": {
+                    "data": "dd/mm/yyyy"
                     descripció.xerrada1
                     assistències.xerrada1
                     rating.xerrada1 
-                }
-            }
-        }
-        ingressos: {
-            coins: 3,
-            exp: 100,
+                },
+            },
+        },
+        "ingressos": {
+            "coins": 3,
+            "exp": 100,
         }
     }
 }
