@@ -14,7 +14,7 @@ html, body {
 }
 
 #user_actions {
-    width: 50%;
+    height: 50%;
 }
 
 #image {
@@ -31,4 +31,8 @@ html, body {
     margin: auto;
     display: block;
     align-self: flex-end;
+}
+
+.button {
+    display: table-column;
 }
