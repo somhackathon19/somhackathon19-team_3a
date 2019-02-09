@@ -33,6 +33,7 @@ html, body {
 #buttons {
     align-content: center;
     width: 100%;
+    padding-top: 10%;
 }
 
 #pop_signin {
@@ -46,6 +47,19 @@ html, body {
     z-index: 2;
     background-color: aliceblue;
     align-self: center;
+}
+
+#sign_head {
+    height: 5%;
+    width: auto;
+    padding: 20px;
+    background-color: aqua;
+}
+
+#x {
+    background-color: red;
+    float: right;
+    cursor: pointer;
 }
 
 .image {

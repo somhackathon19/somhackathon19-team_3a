@@ -20,6 +20,9 @@ if (activeSignInPop === false){
     });
 }
 
+document.getElementById('x').addEventListener('click', function(){
+    signIn_Pop.style.display = "none"
+});
 /*document.getElementById('').addEventListener('click', function(){
     //Do something here
 });
