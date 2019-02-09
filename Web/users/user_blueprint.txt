@@ -1,0 +1,38 @@
+{
+    name: "Nom",
+    age: 16,
+    number: 666666666,
+    email: "somename@hola.cat",
+    interessos: {
+        primer: true,
+        segon: false,
+        tercer: false,
+        quart: true
+    }
+    perfil: {
+        experiència: 100,
+        rating: 012345
+        historial: {
+            xerrades: {
+                {
+                    data.xerrada1
+                    descripció.xerrada1
+                    assistències.xerrada1
+                    rating.xerrada1 
+                }
+            }
+            activitats: {
+                {
+                    data.xerrada1
+                    descripció.xerrada1
+                    assistències.xerrada1
+                    rating.xerrada1 
+                }
+            }
+        }
+        ingressos: {
+            coins: 3,
+            exp: 100,
+        }
+    }
+}
