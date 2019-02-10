@@ -1,3 +1,9 @@
+let coins = 0072
+
+window.onload = function() {
+
+}
+
 function print(a) {
     console.log(a);
 }
