@@ -4,7 +4,7 @@ var activeSignInPop = false;
 //let sign_but = document.getElementById('sign_up')
 
 
-// myStorage = JSON FILES
+
 
 
 var signIn_Pop = document.getElementById('pop_signin');
@@ -23,7 +23,6 @@ if (activeSignInPop === false){
     
     document.getElementById('log_in').addEventListener('click', function(){
         window.location.replace('');
-        myStorage.clear();
     });
 }
 

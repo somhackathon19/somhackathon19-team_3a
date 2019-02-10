@@ -1,16 +1,9 @@
-let coins, num, myStorage
-
-myStorage = window.localStorage;
+let coins, num
 window.onload = function() {
-    if(myStorage.length == 0){
-        coins = 25
-    } else {
-        coins = myStorage.getItem('coins')
-    }
+    coins = 25
     num = 0;
     updateCoins();
 }
-
 
 function apuntat(id) {
     if (coins > 0) {
@@ -18,7 +11,6 @@ function apuntat(id) {
         let resta = values[id-1]
         if (coins > resta) {
             coins -= resta
-            myStorage.setItem('coin', coins);
         }
     }
     if (coins > 1000) {
@@ -259,7 +251,6 @@ function createModal(obj) {
     button3.setAttribute("data-dismiss", "modal")
     button3.addEventListener('click', _=> {
         coins -= obj.value
-        myStorage.setItem('coin', coins)
         updateCoins();
     })
     button3.innerText = "Apuntar-se"

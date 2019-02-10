@@ -3,10 +3,11 @@
 
 
 var User1 = {
-    "name": "Nom",
-    "age": 16,
-    "number": 666666666,
-    "email": "somename@hola.cat",
+    "name": "Carlos",
+    "surname": "Chuan Lleonart",
+    "age": "17",
+    "number": "686 414 216",
+    "email": "chuancho22@gmail.com",
     "password": "",
     "interessos": {
         "primer": true,
