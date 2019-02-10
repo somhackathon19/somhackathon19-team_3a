@@ -49,16 +49,17 @@
         <div class="container">
             <ul class="nav justify-content-center nav-pills">
                 <li class="nav-item">
-                  <button class="nav-link active" href="#" data-toggle="modal" data-target="#LetsSignIn">Sign In</button>
+                  <button class="nav-link active" href="#" data-toggle="modal" data-target="#LetsSignIn">Registrat!</button>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" style="width: 10px"></a>
                 </li>
                 <li class="nav-item">
-                  <button class="nav-link active" href="#" data-toggle="modal" data-target="#LetsLogIn">Log In</button>
+                  <button class="nav-link active" href="#" data-toggle="modal" data-target="#LetsLogIn">Inicia Sessió</button>
                 </li>
               </ul>
-        </div>
+            </div>
+
 
         <!-- MODAL SIGN IN -->
         <div class="modal" id="LetsSignIn">
@@ -67,57 +68,65 @@
               
                     <!-- Modal Header -->
                     <div class="modal-header">
-                      <h4 class="modal-title">_____</h4>
+                      <h4 class="modal-title">Registrat!</h4>
                       <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
-              
                     <!-- Modal body -->
                     <div class="modal-body">
                             <form>
                                     <div class="form-row">
                                       <div class="form-group col-md-6">
-                                        <label for="inputEmail4">Email</label>
+                                        <label for="inputEmail4">Correu electrònic *</label>
                                         <input type="email" class="form-control" id="inputEmail4" placeholder="Email" required>
                                       </div>
                                       <div class="form-group col-md-6">
-                                        <label for="inputPassword4">Password</label>
-                                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                                        <label for="inputPassword4">Contrasenya *</label>
+                                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password" required>
                                       </div>
                                     </div>
                                     <div class="form-group">
-                                      <label for="inputAddress">Address</label>
-                                      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                      <label for="inputAddress">Direcció *</label>
+                                      <input type="text" class="form-control" id="inputAddress" placeholder="1234 La Riera" required>
                                     </div>
                                     <div class="form-group">
-                                      <label for="inputAddress2">Address 2</label>
-                                      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                                      <label for="inputAddress2">Direcció 2</label>
+                                      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, estudi, o planta">
                                     </div>
                                     <div class="form-row">
                                       <div class="form-group col-md-6">
-                                        <label for="inputCity">City</label>
-                                        <input type="text" class="form-control" id="inputCity">
+                                        <label for="inputCity">Ciutat</label>
+                                        <input type="text" class="form-control" id="inputCity" value="Mataró">
                                       </div>
                                       <div class="form-group col-md-4">
-                                        <label for="inputState">State</label>
-                                        <select id="inputState" class="form-control">
-                                          <option selected>Choose...</option>
-                                          <option>...</option>
+                                        <label for="inputState">Barri *</label>
+                                        <select id="inputState" class="form-control" required>
+                                          <option selected>Tria...</option>
+                                          <option>Cerdanyola</option>
+                                          <option>Cirera</option>
+                                          <option>Eixample</option>
+                                          <option>El Palau Escorchador</option>
+                                          <option>Els Molins</option>
+                                          <option>La Llàntia</option>
+                                          <option>Peramàs</option>
+                                          <option>Pla d'en Boet</option>
+                                          <option>Rocafonda</option>
+                                          <option>Vista Alegre</option>
                                         </select>
                                       </div>
                                       <div class="form-group col-md-2">
-                                        <label for="inputZip">Zip</label>
-                                        <input type="text" class="form-control" id="inputZip">
+                                        <label for="inputZip">Zip *</label>
+                                        <input type="text" class="form-control" id="inputZip" required>
                                       </div>
                                     </div>
                                     <div class="form-group">
                                       <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck" required>
                                         <label class="form-check-label" for="gridCheck">
-                                                Al hacer clic, aceptas nuestras <a target="_blank" href="https://es-es.facebook.com/notes/ensenadahoycom/t%C3%A9rminos-y-condiciones-de-uso/188842041152920/">Condiciones de uso</a>.
+                                                Al fer clic, acceptes les nostres <a target="_blank" href="https://es-es.facebook.com/notes/ensenadahoycom/t%C3%A9rminos-y-condiciones-de-uso/188842041152920/">Condiciones de uso</a>.
                                         </label>
                                       </div>
                                     </div>
-                                    <a href="../home/"><input type="button submit" class="btn btn-primary" value="Sign in"></a>
+                                    <a href="../home/"><input type="submit" class="btn btn-primary" value="Envia"></a>
                                   </form>
                     </div>
               
@@ -137,7 +146,7 @@
               
                     <!-- Modal Header -->
                     <div class="modal-header">
-                      <h4 class="modal-title">_____</h4>
+                      <h4 class="modal-title">Inicia sessió</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
               
@@ -145,19 +154,15 @@
                     <div class="modal-body">
                             <form>
                                     <div class="form-group">
-                                      <label for="exampleInputEmail1">Email address</label>
-                                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                      <label for="exampleInputEmail1">Correu electrònic</label>
+                                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Introduïr correu">
+                                      <small id="emailHelp" class="form-text text-muted">Mai compartirem el correu amb ningú.</small>
                                     </div>
                                     <div class="form-group">
-                                      <label for="exampleInputPassword1">Password</label>
-                                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                      <label for="exampleInputPassword1">Contrasenya</label>
+                                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contrasenya">
                                     </div>
-                                    <div class="form-check">
-                                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <a href="../home/"><input type="submit" class="btn btn-primary" value="Inicia"></a>
                                   </form>
                     </div>
                   
