@@ -277,7 +277,7 @@ function createModal(obj) {
     ul3.appendChild(button2)
     div6.appendChild(ul4)
     ul4.appendChild(button3)
-    div1.appendChild(div6)
+    div3.appendChild(div6)
 
     document.getElementById("modals").insertBefore(div1, document.getElementById("myModal1"))
 }
