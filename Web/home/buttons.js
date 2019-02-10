@@ -1,5 +1,3 @@
-var myStorage = window.localStorage;
-
 var lacasito = 'LACASITOOO';
 
 var activeSignInPop = false;
@@ -21,7 +19,6 @@ if (activeSignInPop === false){
         activeSignInPop = true;
         //console.log(num)
 
-        myStorage.setItem('Luser', 'Miquel Trafí');
     });
     
     document.getElementById('log_in').addEventListener('click', function(){
