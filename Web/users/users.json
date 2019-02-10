@@ -3,6 +3,7 @@
     "age": 16,
     "number": 666666666,
     "email": "somename@hola.cat",
+    "password": "",
     "interessos": {
         "primer": true,
         "segon": false,
