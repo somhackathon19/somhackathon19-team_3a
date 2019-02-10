@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -63,31 +63,33 @@
                         new QRCode(document.getElementById("qrcode"), "http://jindo.dev.naver.com/collie");
                         </script>
 
-                        <!-- CARD 1 -->
-                        <div class="card">
+                        <div id="cards_container">
 
-                            <div class="card-body navbar">
-                                <a class="nav navbar-brand pull-sm-right" href="../sources/ioga.jpg">
-                                    <img src="../sources/ioga.jpg" class="rounded" alt="Logo" style="width: 50px;">
-                                </a>
-                                <ul class="navbar-nav mr-auto">
-                                    <li class="nav-item avtive">
-                                        Curs YOGA grupal
-                                    </li>
+                            <!-- CARD 1 -->
+                            <div class="card" id="card1">
+                                
+                                <div class="card-body navbar">
+                                    <a class="nav navbar-brand pull-sm-right" href="../sources/ioga.jpg">
+                                        <img src="../sources/ioga.jpg" class="rounded" alt="Logo" style="width: 50px;">
+                                    </a>
+                                    <ul class="navbar-nav mr-auto">
+                                        <li class="nav-item avtive">
+                                            Curs YOGA grupal
+                                        </li>
                                     <li class="nav-item active">
                                         <a class="nav-link" href="#">12 &#8362;<span class="sr-only">(current)</span></a>
                                     </li>
                                 </ul>
                             </div>
-
+                            
                             <div class="card-footer" type="button" data-toggle="modal" data-target="#myModal1" style="cursor: pointer">More info...</div>
                         </div>
-
+                        
                         <br>
-
+                        
                         <!-- CARD 2 -->
                         <div class="card">
-
+                            
                             <div class="card-body navbar">
                                 <a class="nav navbar-brand pull-sm-right" href="../sources/basuqet.jpg">
                                     <img src="../sources/basuqet.jpg" class="rounded" alt="Logo" style="width:40px;">
@@ -101,15 +103,15 @@
                                     </li>
                                 </ul>
                             </div>
-
+                            
                             <div class="card-footer" type="button" data-toggle="modal" data-target="#myModal2">More info...</div>
                         </div>
-
+                        
                         <br>
-
+                        
                         <!-- CARD 3 -->
                         <div class="card">
-
+                            
                             <div class="card-body navbar">
                                 <a class="nav navbar-brand pull-sm-right" href="../sources/chess.jpg">
                                     <img src="../sources/chess.jpg" class="rounded" alt="Logo" style="width:40px;">
@@ -123,15 +125,15 @@
                                     </li>
                                 </ul>
                             </div>
-
+                            
                             <div class="card-footer" type="button" data-toggle="modal" data-target="#myModal3">More info...</div>
                         </div>
-
+                        
                         <br>
-
+                        
                         <!-- CARD 4 -->
                         <div class="card">
-
+                            
                             <div class="card-body navbar">
                                 <a class="nav navbar-brand pull-sm-right" href="../sources/estrelles.jpg">
                                     <img src="../sources/estrelles.jpg" class="rounded" alt="Logo" style="width:40px;">
@@ -145,12 +147,12 @@
                                     </li>
                                 </ul>
                             </div>
-
+                            
                             <div class="card-footer" type="button" data-toggle="modal" data-target="#myModal4">More info...</div>
                         </div>
-
+                        
                         <br>
-
+                        
                         <!-- CARD 5 -->
                         <div class="card">
 
@@ -167,15 +169,16 @@
                                     </li>
                                 </ul>
                             </div>
-
+                            
                             <div class="card-footer" type="button" data-toggle="modal" data-target="#myModal2">More info...</div>
                         </div>
-
+                        
                         <br>
-
+                        
                     </div>
+                </div>
             </div>
-
+                
        
         <!------------------------------------------ MODAL SECTION ------------------------------------------->
 
@@ -215,10 +218,13 @@
               
                     <!-- Modal footer -->   
                     <div class="modal-footer navbar-brand">
-                      <ul class="nav navbar-brand pull-sm-right">  
+                        <ul class="nav navbar-brand pull-sm-left">  
+                                <button type="button" class="btn" data-dismiss="modal">Close</button>
+                            </ul>
+                        </div>
+                      <ul class="nav navbar-brand pull-sm-left">  
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                     </ul>
-                    </div>
               
                   </div>
                 </div>
@@ -369,56 +375,63 @@
         
                 <!-- Modal body -->
                 <div class="modal-body">
-                    <ul class="navbar-nav mr-auto">
-                        <h3>De què anirà l'event?</h3>
+                    <ul class="navbar-nav mr-auto" >
+                        <h3 id="bien">De què anirà l'event?</h3>
                     </ul>
                     <br>
-                    <div class="form-group">
+                    <div class="form-group" id="jaja1">
                         <label for="usr">Títol:</label>
                         <input type="text" class="form-control" id="usr" placeholder="Títol">
                     </div>
-                    <div class="form-group">
-                            <label for="comment">Descripció:</label>
-                            <textarea class="form-control" rows="5" id="comment" placeholder="Escriu aquí la teva descripció:"></textarea>
+                    <div class="form-group" id="jaja2">
+                        <label for="comment">Descripció:</label>
+                        <textarea class="form-control" rows="5" id="comment" placeholder="Escriu aquí la teva descripció:"></textarea>
                     </div>
                     <br>
-                    <div class="custom-file">
+                    <div class="form-group row" id="jaja3">
+                        <label for="example-datetime-local-input" class="col-2 col-form-label">Dia:</label>
+                        <div class="col-10">
+                         <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="custom-file" id="jaja4">
                         <input type="file" class="custom-file-input" id="customFileLang" lang="es" accept=".png,.jpg,.ico,.jpeg">
                         <label class="custom-file-label" for="customFileLang">Tria una fotografia descriptiva:</label>
                     </div>
                     <br><br>
-                    <label for="exampleFormControlFile1">Tria el tema de l'event:</label>
-                    <select class="custom-select">
+                    <label for="exampleFormControlFile1" id="jaja5">Tria el tema de l'event:</label>
+                    <select class="custom-select" id="tema">
                         <option selected>Tema</option>
-                        <option value="1">Arts</option>
-                        <option value="2">Ciències</option>
-                        <option value="3">Tecnologies</option>
-                        <option value="3">Esportiu</option>
-                        <option value="3">Cultural</option>
-                        <option value="3">Literatura</option>
+                        <option value="Arts">Arts</option>
+                        <option value="Ciències">Ciències</option>
+                        <option value="Tecnologies">Tecnologies</option>
+                        <option value="Esportiu">Esportiu</option>
+                        <option value="Cultural">Cultural</option>
+                        <option value="Literatura">Literatura</option>
                     </select>
                     <br>
                     <br>
-                    <label for="exampleFormControlFile1">Tria la durada de l'event:</label>
-                    <select class="custom-select" onchange="chech(this.value)">
+                    <label for="exampleFormControlFile1" id="jaja7">Tria la durada de l'event:</label>
+                    <select class="custom-select" onchange="chech(this.value)" id="event_length">
                         <option selected>Preu</option>
-                        <option value="1">< 30min</option>
-                        <option value="2">30min</option>
-                        <option value="3">1h</option>
-                        <option value="4">1:30h</option>
-                        <option value="5">2h</option>
-                        <option value="6">2:30h</option>
-                        <option value="7">3h</option>
+                        <option value="1" name="< 30min">< 30min</option>
+                        <option value="2" name="30min">30min</option>
+                        <option value="3" name="1h">1h</option>
+                        <option value="4" name="1:30h">1:30h</option>
+                        <option value="5" name="2h">2h</option>
+                        <option value="6" name="2:30h">2:30h</option>
+                        <option value="7" name="3h">3h</option>
                     </select>
                     <br><br>
                     <div class="form-group row">
-                        <label for="example-number-input" class="col-2 col-form-label">Number</label>
+                        <label for="example-number-input" class="col-2 col-form-label" id="jaja6">Number</label>
                         <div class="col-10">
                             <input class="form-control" type="number" value="0" id="example-number-input" min="0" max="0">
                         </div>
                     </div>
                     <br><br>
-                    <button class="btn btn-primary" type="submit" onclick="submit()">Submit form</button>
+                    <button class="btn btn-primary" type="submit" onclick="submit()" id="jaja8">Submit form</button>
                 </div>
         
                 <!-- Modal footer -->   
