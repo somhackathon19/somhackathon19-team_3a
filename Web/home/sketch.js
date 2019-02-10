@@ -2,6 +2,7 @@ let coins, num
 window.onload = function() {
     coins = 72
     num = 0;
+    updateCoins();
 }
 
 function apuntat(id) {
@@ -74,7 +75,7 @@ function submit() {
     let a = {};
     a.title = document.getElementById("usr").value;
     a.desc = document.getElementById("comment").value;
-    a.time = document.getElementById("example-datetime-local-input").value
+    a.time = document.getElementById("example-date-input").value
     a.imgLink = document.getElementById("customFileLang").value
     a.tema = document.getElementById("tema").value
     a.long = document.getElementById("event_length").name
@@ -166,7 +167,7 @@ function createEvent(obj) {
 
 function done()  {
     document.getElementById("comment").style.display = "none";
-    document.getElementById("example-datetime-local-input").style.display = "none"
+    document.getElementById("example-date-input").style.display = "none"
     document.getElementById("customFileLang").style.display = "none"
     document.getElementById("tema").style.display = "none"
     document.getElementById("event_length").style.display = "none"
@@ -283,4 +284,16 @@ function createModal(obj) {
 
 function reset() {
 
+}
+
+function updateCoins() {
+    if (coins > 1000) {
+        document.getElementById("coins").innerText = `₪ ${coins}`
+    } else if (coins >= 100 && coins <= 999) {
+        document.getElementById("coins").innerText = `₪ 0${coins}`
+    } else if (coins < 100 && coins > 9) {
+        document.getElementById("coins").innerText = `₪ 00${coins}`
+    } else if (coins <= 9) {
+        document.getElementById("coins").innerText = `₪ 000${coins}`
+    }
 }
