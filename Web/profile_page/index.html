@@ -1,34 +1,109 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>User page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
-    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
-    <script src="sketch.js"></script>
-    <script src="firebase_utilities.js"></script>
-</head>
-<body>
-    <header id="header">
-        <span id="username">User name</span>
-        <div id="user_choose"></div>
-    </header>
-    <div style="height: 80px; width: 100%"></div>
+    <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <title>ILURAMA</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+            <script src="../users/profiles.js"></script>
+            <script src="sketch.js"></script>
+        
+            <!-- Bootstrap 4 -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+        </head>
 
+<body style=" background-color:#0e0f1a">
+
+        <!-- NAV HEADER -->
+        <nav id="header" class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" style="background-color:#2c67a1 !important; color: black !important;">
+
+                <a class="navbar-brand" href="#">
+                    <img src="../sources/home-512.png" alt="Logo" style="width:40px;">
+                </a>
+                <ul class="navbar-nav mx-auto">
+                    <div class="nav-item active">
+                        <h1>Ilurama</h1>
+                    </div>
+                </ul>
+<!---                <ul class="navbar-nav pull-sm-right">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#" id="coins">&#8362; 72<span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>-->
+                <ul class="navbar-nav pull-sm-right">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="../set_page/">Log out<span class="sr-only" style="display: inline-block;">(current)</span></a>
+                    </li>
+                </ul>
+            
+            
+        </nav>
+        <div style="height: 79.39px; width: 100%;"></div>
+
+
+        <!-- BODY -->
     <div id="main">
+        <br>
 
-        <div id="experiencia" class="container">
+        <div id="events" class="container card">
+            <br>
+            <ul class="nav">
+                <li class="nav-item">
+                    <img src="../sources/UndefinedUserIcon.png" alt="Profile Picture" style="height: 200px">
+                </li>
+                <li class="nav-item" style="height:auto; width:30px">
+                </li>
+                <ul class="nav-item">
+                    <h1 class="display-3 row" id="line">Carlos</h1>
+                    <br>
+                    <h1 class="row"> Chuan Lleonart </h1>
+                </ul>
+                <li style="height:auto; width:30px"></li>
+                <ul class="nav-item">
+                        <h1 class="display-3 row" id="line">34 anys</h1>
+                        <br>
+                        <h1 class="row"> 657 345 234 </h1>
+                </ul>
+            </ul>
+        </br>
+        </div>
+            <br>
+
+        <div id="experiencia" class="container card">
+            <div class="row">
+                <div class="col-sm-6">
             <h1 class="line">Experiència</h1>
-            <div id="level" class="line">
+            <br>
+            <br>
+            <div id="level" class="line" style="width:500px">
                 <span class="level">Nivell 1</span>
                 <progress value="63" max="100"></progress>
                 <span class="level">Nivell 2</span>
             </div>
+            <br>
+                </div>
+                <div class="col-sm-6">
+                    <h1 class="line">Ràtings</h1>
+                    <br>
+                    <br>
+                    <div id="level" class="line" style="width:500px">
+                        <span class="level">0</span>
+                        <progress value=80 max="100"></progress>
+                        <span class="level">5</span>
+                    </div>
+                    <br>
+                    <br>
+                </div>
         </div>
+    </div>
 
-        <div id="events" class="container">
+        <br>
+
+        <div id="events" class="container card">
             <h1 id="line">Historial d'events</h1>
         </div>
     </div>
