@@ -197,9 +197,9 @@ function createModal(obj) {
     let div4 = document.createElement("div")
     div4.classList.add("modal-header")
 
-    let h41 = document.createElement("h4")
-    h41.classList.add("modal-title")
-    h41.innerText = `${obj.title}`
+    let h21 = document.createElement("h2")
+    h21.classList.add("modal-title")
+    h21.innerText = `${obj.title}`
 
     let button1 = document.createElement("button")
     button1.setAttribute("type", "button")
@@ -226,6 +226,10 @@ function createModal(obj) {
     img1.setAttribute("alt", "Logo")
     img1.setAttribute("style", "width:150px;")
 
+    let h42 = document.createElement("h5")
+    h42.innerText = "Descripció de l'event:"
+    h42.setAttribute("style", "font-weight: bold")
+    
     let p1 = document.createElement("p")
     p1.innerText = `${obj.desc}`
 
@@ -264,12 +268,13 @@ function createModal(obj) {
     div1.appendChild(div2)
     div2.appendChild(div3)
     div3.appendChild(div4)
-    div4.appendChild(h41)
+    div4.appendChild(h21)
     div4.appendChild(button1)
     div3.appendChild(div5)
     div5.appendChild(ul1)
     ul1.appendChild(a1)
     a1.appendChild(img1)
+    ul1.appendChild(h42)
     ul1.appendChild(p1)
     div5.appendChild(ul2)
     ul2.appendChild(a2)
@@ -277,13 +282,27 @@ function createModal(obj) {
     ul3.appendChild(button2)
     div6.appendChild(ul4)
     ul4.appendChild(button3)
-    div1.appendChild(div6)
+    div3.appendChild(div6)
 
     document.getElementById("modals").insertBefore(div1, document.getElementById("myModal1"))
 }
 
 function reset() {
-
+    document.getElementById("comment").style.display = "block";
+    document.getElementById("example-date-input").style.display = "block"
+    document.getElementById("customFileLang").style.display = "block"
+    document.getElementById("tema").style.display = "block"
+    document.getElementById("event_length").style.display = "block"
+    document.getElementById("example-number-input").style.display = "block"
+    document.getElementById("jaja1").style.display = "block"
+    document.getElementById("jaja2").style.display = "block"
+    document.getElementById("jaja3").style.display = "block"
+    document.getElementById("jaja4").style.display = "block"
+    document.getElementById("jaja5").style.display = "block"
+    document.getElementById("jaja6").style.display = "block"
+    document.getElementById("jaja7").style.display = "block"
+    document.getElementById("jaja8").style.display = "block"
+    document.getElementById("bien").style.display = "none"
 }
 
 function updateCoins() {
