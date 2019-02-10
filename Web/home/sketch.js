@@ -1,7 +1,14 @@
-let coins = 0072
-
+let coins
 window.onload = function() {
+    coins = 0072
+}
 
+function apuntat(id) {
+    let values = [12, 8, 5, 17, 4]
+    let resta = values[id-1]
+    coins -= resta
+
+    document.getElementById("coins").innerText = `₪ ${coins}`
 }
 
 function print(a) {
