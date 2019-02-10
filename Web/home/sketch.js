@@ -166,21 +166,11 @@ function createEvent(obj) {
 }
 
 function done()  {
-    document.getElementById("comment").style.display = "none";
-    document.getElementById("example-date-input").style.display = "none"
-    document.getElementById("customFileLang").style.display = "none"
-    document.getElementById("tema").style.display = "none"
-    document.getElementById("event_length").style.display = "none"
-    document.getElementById("example-number-input").style.display = "none"
-    document.getElementById("jaja1").style.display = "none"
-    document.getElementById("jaja2").style.display = "none"
-    document.getElementById("jaja3").style.display = "none"
-    document.getElementById("jaja4").style.display = "none"
-    document.getElementById("jaja5").style.display = "none"
-    document.getElementById("jaja6").style.display = "none"
-    document.getElementById("jaja7").style.display = "none"
-    document.getElementById("jaja8").style.display = "none"
-    document.getElementById("bien").innerText = "Event creat correctament!"
+    document.getElementById("usr").value = "";
+
+    let a = document.getElementById("bien")
+    a.innerText = "Event creat correctament!"
+    a.setAttribute("class", "alert alert-success")
 }
 
 function createModal(obj) {
@@ -302,7 +292,7 @@ function reset() {
     document.getElementById("jaja6").style.display = "block"
     document.getElementById("jaja7").style.display = "block"
     document.getElementById("jaja8").style.display = "block"
-    document.getElementById("bien").style.display = "none"
+    //document.getElementById("bien").style.display = "none"
 }
 
 function updateCoins() {
