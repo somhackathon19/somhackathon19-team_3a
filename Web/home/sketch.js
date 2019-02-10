@@ -1,6 +1,6 @@
 let coins, num
 window.onload = function() {
-    coins = 72
+    coins = 25
     num = 0;
     updateCoins();
 }
