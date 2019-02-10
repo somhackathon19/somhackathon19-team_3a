@@ -1,6 +1,7 @@
-let coins
+let coins, num
 window.onload = function() {
     coins = 72
+    num = 0;
 }
 
 function apuntat(id) {
@@ -89,15 +90,17 @@ function createEvent(obj) {
     done();
     let div1 = document.createElement("div")
     div1.classList.add("card")
+    div1.setAttribute("style", "background-color: #ffffffaf")
 
     let div2 = document.createElement("div")
     div2.classList.add("card-body")
     div2.classList.add("navbar")
 
-    let a = document.createElement("a", {href: `${obj.imgLink}`})
-    a.classList.add("nav")
-    a.classList.add("navbar-brand")
-    a.classList.add("pull-sm-right")
+    let a1 = document.createElement("a")
+    a1.classList.add("nav")
+    a1.classList.add("navbar-brand")
+    a1.classList.add("pull-sm-right")
+    a1.setAttribute("href", `${obj.imgLink}`)
 
     let img = document.createElement("img")
     img.setAttribute("src", `${obj.imgLink}`)
@@ -105,47 +108,51 @@ function createEvent(obj) {
     img.setAttribute("alt", "Logo")
     img.setAttribute("style", "width: 50px;")
 
-    let ul = document.createElement("ul")
-    ul.setAttribute("class", "navbar-nav")
-    ul.setAttribute("class", "mr-auto")
+    let div3 = document.createElement("div")
+    div3.setAttribute("class", "row")
+    div3.setAttribute("class", "align-items-center")
+    div3.setAttribute("style", "width: 90%;")
 
-    let li1 = document.createElement("li")
-    li1.setAttribute("class", "nav-item")
-    li1.setAttribute("class", "avtive")
-    li1.innerText = `${obj.title}`;
+    let div4 = document.createElement("div")
+    div4.setAttribute("class", "col-sm")
+    div4.innerHTML = `${obj.title}`
 
-    let li2 = document.createElement("li", {class:"nav-item active"})
-    li2.setAttribute("class", "nav-item")
-    li2.setAttribute("class", "active")
+    let div5 = document.createElement("div")
+    div5.setAttribute("class", "col-sm")
 
     let a2 = document.createElement("a")
     a2.setAttribute("class", "nav-link")
     a2.setAttribute("href", "#")
+    a2.setAttribute("style", "text-align: -webkit-center;")
     a2.innerText = `${obj.value} ₪`
 
-    let span = document.createElement("span")
-    span.setAttribute("class", "sr-only")
-    span.innerHTML = "(current)"
+    let div6 = document.createElement("div")
+    div6.setAttribute("class", "col-sm")
+    div6.setAttribute("style", "text-align: -webkit-center;")
+    div6.innerText = `${obj.time}`
 
-    let div3 = document.createElement("div", {class:"card-footer", type:"button", "data-toggle":"modal", "data-target":"#myModal1", style:"cursor: pointer"})
-    div3.setAttribute("class", "card-footer")
-    div3.setAttribute("type", "button")
-    div3.setAttribute("data-toggle", "modal")
-    div3.setAttribute("data-target", "someid")
-    div3.setAttribute("style", "cursor: pointer")
+    let div7 = document.createElement("div")
+    div7.setAttribute("class", "card-footer")
+    div7.setAttribute("type", "button")
+    div7.setAttribute("data-toggle", "modal")
+    div7.setAttribute("data-target", `#modalCreated${num}`)
+    div7.setAttribute("style", "cursor: pointer")
+    
 
     let father = document.getElementById("cards_container")
+    
     father.appendChild(div1)
     div1.appendChild(div2)
-    div2.appendChild(a)
-    a.appendChild(img)
-    div2.appendChild(ul)
-    ul.appendChild(li1)
-    ul.appendChild(li2)
-    li2.appendChild(a2)
-    a2.appendChild(span)
+    div2.appendChild(a1)
+    a1.appendChild(img)
+    div2.appendChild(div3)
+    div3.appendChild(div4)
+    div3.appendChild(div5)
+    div5.appendChild(a2)
+    div1.appendChild(div7)
     father.insertBefore(div1, document.getElementById("card1"))
-    father.appendChild(div3)
+
+    num++
 }
 
 function done()  {
