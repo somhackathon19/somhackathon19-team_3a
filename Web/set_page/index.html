@@ -25,16 +25,132 @@
             
         </nav>
         <div style="height: 79.39px; width: 100%;"></div>
+        
 
         <!-- BODY -->
+
+        <!-- LOGO -->
+        <div class="container" style="height: 350px; width: auto">
+        <a  href="../sources/Ilurama.png">
+            <img class="mx-auto block" src="../sources/Ilurama.png" alt="Icono" style="height: 350px">
+        </a>
+        </div>
+
+        <!-- BOTONS SIGN IN // LOG IN -->
         <div class="container">
-        <h1>My First Bootstrap Page</h1>
-        <p>This part is inside a .container class.</p> 
-        <p>The .container class provides a responsive fixed width container.</p>           
-</div>
+            <ul class="nav justify-content-center nav-pills">
+                <li class="nav-item">
+                  <button class="nav-link active" href="#" data-toggle="modal" data-target="#LetsSignIn">Sign In</button>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="width: 10px"></a>
+                </li>
+                <li class="nav-item">
+                  <button class="nav-link active" href="#" data-toggle="modal" data-target="#LetsLogIn">Log In</button>
+                </li>
+              </ul>
+        </div>
+
+        <!-- MODAL SIGN IN -->
+        <div class="modal" id="LetsSignIn">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+              
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                      <h4 class="modal-title">_____</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+              
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                            <form>
+                                    <div class="form-row">
+                                      <div class="form-group col-md-6">
+                                        <label for="inputEmail4">Email</label>
+                                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email" required>
+                                      </div>
+                                      <div class="form-group col-md-6">
+                                        <label for="inputPassword4">Password</label>
+                                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                                      </div>
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="inputAddress">Address</label>
+                                      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="inputAddress2">Address 2</label>
+                                      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                                    </div>
+                                    <div class="form-row">
+                                      <div class="form-group col-md-6">
+                                        <label for="inputCity">City</label>
+                                        <input type="text" class="form-control" id="inputCity">
+                                      </div>
+                                      <div class="form-group col-md-4">
+                                        <label for="inputState">State</label>
+                                        <select id="inputState" class="form-control">
+                                          <option selected>Choose...</option>
+                                          <option>...</option>
+                                        </select>
+                                      </div>
+                                      <div class="form-group col-md-2">
+                                        <label for="inputZip">Zip</label>
+                                        <input type="text" class="form-control" id="inputZip">
+                                      </div>
+                                    </div>
+                                    <div class="form-group">
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                                        <label class="form-check-label" for="gridCheck">
+                                                Al hacer clic, aceptas nuestras <a target="_blank" href="https://es-es.facebook.com/notes/ensenadahoycom/t%C3%A9rminos-y-condiciones-de-uso/188842041152920/">Condiciones de uso</a>.
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <a href="../home/"><input type="button submit" class="btn btn-primary" value="Sign in"></a>
+                                  </form>
+                    </div>
+              
+                    <!-- Modal footer -->   
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Tornar</button>
+                    </div>
+              
+                  </div>
+                </div>
+        </div>
+
+        <!-- MODAL LOG IN -->
+        <div class="modal" id="LetsLogIn">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+              
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                      <h4 class="modal-title">_____</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+              
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item avtive">
+                                    <h1>_____</h1>
+                                </li>
+                            </ul>
+                      _____
+                    </div>
+                  
+                        <!-- Modal footer -->   
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Tornar</button>
+                    </div>
+                  
+    
+                  </div>
+                </div>
+        </div>
 
 </body>
 </html>
-
-
-https://insiders.liveshare.vsengsaas.visualstudio.com/join?F2FF5C4C29830D3CDF0FE2BABE3B2EE0F6E5
