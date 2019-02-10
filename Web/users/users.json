@@ -4,12 +4,6 @@
     "number": 666666666,
     "email": "somename@hola.cat",
     "password": "",
-    "interessos": {
-        "primer": true,
-        "segon": false,
-        "tercer": false,
-        "quart": true
-    },
     "perfil": {
         "experiència": 100,
         "rating": 4.2,
