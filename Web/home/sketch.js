@@ -91,6 +91,7 @@ function createEvent(obj) {
     let div1 = document.createElement("div")
     div1.classList.add("card")
     div1.setAttribute("style", "background-color: #ffffffaf")
+    div1.setAttribute("id", `created_card_${num}`)
 
     let div2 = document.createElement("div")
     div2.classList.add("card-body")
@@ -104,39 +105,42 @@ function createEvent(obj) {
 
     let img = document.createElement("img")
     img.setAttribute("src", `${obj.imgLink}`)
-    img.setAttribute("class", "rounded")
+    img.classList.add("rounded")
     img.setAttribute("alt", "Logo")
     img.setAttribute("style", "width: 50px;")
 
     let div3 = document.createElement("div")
-    div3.setAttribute("class", "row")
-    div3.setAttribute("class", "align-items-center")
+    div3.classList.add("row")
+    div3.classList.add("align-items-center")
     div3.setAttribute("style", "width: 90%;")
 
     let div4 = document.createElement("div")
-    div4.setAttribute("class", "col-sm")
+    div4.classList.add("col-sm")
     div4.innerHTML = `${obj.title}`
 
     let div5 = document.createElement("div")
-    div5.setAttribute("class", "col-sm")
+    div5.classList.add("col-sm")
 
     let a2 = document.createElement("a")
-    a2.setAttribute("class", "nav-link")
+    a2.classList.add("nav-link")
     a2.setAttribute("href", "#")
     a2.setAttribute("style", "text-align: -webkit-center;")
     a2.innerText = `${obj.value} ₪`
 
     let div6 = document.createElement("div")
-    div6.setAttribute("class", "col-sm")
+    div6.classList.add("col-sm")
     div6.setAttribute("style", "text-align: -webkit-center;")
     div6.innerText = `${obj.time}`
 
     let div7 = document.createElement("div")
-    div7.setAttribute("class", "card-footer")
+    div7.classList.add("card-footer")
     div7.setAttribute("type", "button")
     div7.setAttribute("data-toggle", "modal")
     div7.setAttribute("data-target", `#modalCreated${num}`)
     div7.setAttribute("style", "cursor: pointer")
+    div7.innerText = "More info..."
+
+    let br = document.createElement("br")
     
 
     let father = document.getElementById("cards_container")
@@ -149,8 +153,13 @@ function createEvent(obj) {
     div3.appendChild(div4)
     div3.appendChild(div5)
     div5.appendChild(a2)
+    div3.appendChild(div6)
     div1.appendChild(div7)
     father.insertBefore(div1, document.getElementById("card1"))
+    father.insertBefore(br, document.getElementById("card1"))
+
+    createModal(obj);
+    reset();
 
     num++
 }
@@ -171,4 +180,107 @@ function done()  {
     document.getElementById("jaja7").style.display = "none"
     document.getElementById("jaja8").style.display = "none"
     document.getElementById("bien").innerText = "Event creat correctament!"
+}
+
+function createModal(obj) {
+    let div1 = document.createElement("div")
+    div1.classList.add("modal")
+    div1.setAttribute("id", `modalCreated${num}`)
+
+    let div2 = document.createElement("div")
+    div2.classList.add("modal-dialog")
+
+    let div3 = document.createElement("div")
+    div3.classList.add("modal-content")
+
+    let div4 = document.createElement("div")
+    div4.classList.add("modal-header")
+
+    let h41 = document.createElement("h4")
+    h41.classList.add("modal-title")
+    h41.innerText = `${obj.title}`
+
+    let button1 = document.createElement("button")
+    button1.setAttribute("type", "button")
+    button1.classList.add("close")
+    button1.setAttribute("data-dismiss", "modal")
+    button1.innerHTML = "&times;"
+
+    let div5 = document.createElement("div")
+    div5.classList.add("modal-body")
+
+    let ul1 = document.createElement("ul")
+    ul1.classList.add("navbar-nav")
+    ul1.classList.add("mr-auto")
+
+    let a1 = document.createElement("a")
+    a1.classList.add("nav")
+    a1.classList.add("navbar-brand")
+    a1.classList.add("pull-sm-right")
+    a1.setAttribute("href", `${obj.imgLink}`)
+
+    let img1 = document.createElement("img")
+    img1.classList.add("rounded")
+    img1.setAttribute("src", `${obj.imgLink}`)
+    img1.setAttribute("alt", "Logo")
+    img1.setAttribute("style", "width:150px;")
+
+    let p1 = document.createElement("p")
+    p1.innerText = `${obj.desc}`
+
+    let ul2 = document.createElement("ul")
+
+    let a2 = document.createElement("a")
+    a2.classList.add("nav")
+    a2.classList.add("navbar-brand")
+    a2.classList.add("pull")
+
+    let div6 = document.createElement("div")
+    div6.setAttribute("class", "modal-footer navbar-brand")
+
+    let ul3 = document.createElement("ul")
+    ul3.setAttribute("class", "nav navbar-brand pull-sm-left")
+
+    let button2 = document.createElement("button")
+    button2.setAttribute("type", "button")
+    button2.setAttribute("class", "btn btn-danger")
+    button2.setAttribute("data-dismiss", "modal")
+    button2.innerText = "Tanca"
+
+    let ul4 = document.createElement("ul")
+    ul4.setAttribute("class", "nav navbar-brand pull-sm-left")
+
+    let button3 = document.createElement("button")
+    button3.setAttribute("class", "btn btn-success")
+    button3.setAttribute("type", "button")
+    button3.setAttribute("data-dismiss", "modal")
+    button3.addEventListener('click', _=> {
+        coins -= obj.value
+        updateCoins();
+    })
+    button3.innerText = "Apuntar-se"
+
+    div1.appendChild(div2)
+    div2.appendChild(div3)
+    div3.appendChild(div4)
+    div4.appendChild(h41)
+    div4.appendChild(button1)
+    div3.appendChild(div5)
+    div5.appendChild(ul1)
+    ul1.appendChild(a1)
+    a1.appendChild(img1)
+    ul1.appendChild(p1)
+    div5.appendChild(ul2)
+    ul2.appendChild(a2)
+    div6.appendChild(ul3)
+    ul3.appendChild(button2)
+    div6.appendChild(ul4)
+    ul4.appendChild(button3)
+    div1.appendChild(div6)
+
+    document.getElementById("modals").insertBefore(div1, document.getElementById("myModal1"))
+}
+
+function reset() {
+
 }
