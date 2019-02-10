@@ -1,4 +1,9 @@
+
+
+
+
 let coins, num
+
 window.onload = function() {
     coins = 25
     num = 0;
