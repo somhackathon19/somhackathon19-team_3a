@@ -1,14 +1,26 @@
 let coins
 window.onload = function() {
-    coins = 0072
+    coins = 72
 }
 
 function apuntat(id) {
-    let values = [12, 8, 5, 17, 4]
-    let resta = values[id-1]
-    coins -= resta
-
-    document.getElementById("coins").innerText = `₪ ${coins}`
+    if (coins > 0) {
+        let values = [12, 8, 5, 17, 4]
+        let resta = values[id-1]
+        if (coins > resta) {
+            coins -= resta
+        }
+    }
+    if (coins > 1000) {
+        document.getElementById("coins").innerText = `₪ ${coins}`
+    } else if (coins >= 100 && coins <= 999) {
+        document.getElementById("coins").innerText = `₪ 0${coins}`
+    } else if (coins < 100 && coins > 9) {
+        document.getElementById("coins").innerText = `₪ 00${coins}`
+    } else if (coins <= 9) {
+        document.getElementById("coins").innerText = `₪ 000${coins}`
+    }
+    
 }
 
 function print(a) {
